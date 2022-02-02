@@ -78,7 +78,10 @@
             <div>
                 <label class="fmt_label" for="">Answer 1</label>
                 <input class="fmt_input" type="text" name="answer_1" placeholder="Answer" >
+                <label class="fmt_label" for="">English Audio 1</label>
                 <input style="margin-top:10px;" type="file" accept="audio/*" name="answer_1_media" id=""required>
+                <label class="fmt_label" for="">Spanish Audio 1</label>
+                <input style="margin-top:10px;" type="file" accept="audio/*" name="answer_1_media_es" id=""required>
             </div>
             <div>
                 <label class="fmt_label" for="">Correct</label>
@@ -95,7 +98,10 @@
             <div>
                 <label class="fmt_label" for="">Answer 2</label>
                 <input class="fmt_input" type="text" name="answer_2" placeholder="Answer">
+                <label class="fmt_label" for="">English Audio 2</label>
                 <input style="margin-top:10px;" type="file" accept="audio/*" name="answer_2_media" id="">
+                <label class="fmt_label" for="">Spanish Audio 2</label>
+                <input style="margin-top:10px;" type="file" accept="audio/*" name="answer_2_media_es" id="">
             </div>
             <div>
                 <label class="fmt_label" for="">Correct</label>
@@ -112,7 +118,10 @@
             <div>
                 <label class="fmt_label" for="">Answer 3</label>
                 <input class="fmt_input" type="text" name="answer_3" placeholder="Answer">
+                <label class="fmt_label" for="">English Audio 3</label>
                 <input style="margin-top:10px;" type="file" accept="audio/*" name="answer_3_media" id="">
+                <label class="fmt_label" for="">Spanish Audio 3</label>
+                <input style="margin-top:10px;" type="file" accept="audio/*" name="answer_3_media_es" id="">
             </div>
             <div>
                 <label class="fmt_label" for="">Correct</label>
@@ -129,7 +138,10 @@
             <div>
                 <label class="fmt_label" for="">Answer 4</label>
                 <input class="fmt_input" type="text" name="answer_4" placeholder="Answer">
+                <label class="fmt_label" for="">English Audio 4</label>
                 <input style="margin-top:10px;" type="file" accept="audio/*" name="answer_4_media" id="">
+                <label class="fmt_label" for="">Spanish Audio 4</label>
+                <input style="margin-top:10px;" type="file" accept="audio/*" name="answer_4_media_es" id="">
             </div>
             <div>
                 <label class="fmt_label" for="">Correct</label>
@@ -142,7 +154,7 @@
         </div>
         {{-- //answer4-match4 --}}
         {{-- answer5-match5 --}}
-        <div class="fmt_flex">
+        {{-- <div class="fmt_flex">
             <div>
                 <label class="fmt_label" for="">Answer 5</label>
                 <input class="fmt_input" type="text" name="answer_5" placeholder="Answer">
@@ -156,10 +168,10 @@
                 <label class="fmt_label" for="">English Word 5</label>
                 <input class="fmt_input" type="text" name="eng_word5" placeholder="eng_word5" >
             </div>
-        </div>
+        </div> --}}
         {{-- //answer5-match5 --}}
         {{-- answer6-match6 --}}
-        <div class="fmt_flex">
+        {{-- <div class="fmt_flex">
             <div>
                 <label class="fmt_label" for="">Answer 6</label>
                 <input class="fmt_input" type="text" name="answer_6" placeholder="Answer">
@@ -173,7 +185,7 @@
                 <label class="fmt_label" for="">English Word 6</label>
                 <input class="fmt_input" type="text" name="eng_word6" placeholder="eng_word6" >
             </div>
-        </div>
+        </div> --}}
         {{-- //answer6-match6 --}}
         <div>
             <input type="submit" class="fmt_sub_btn" value="Submit">
@@ -200,6 +212,10 @@
     <div style="display:block; padding:10px;">
         <div style="font-size:12px;">Audio</div>
         <input style="display:block;" type="file" name="audio[]" multiple accept="audio/*" placeholder="audio" required>
+    </div>
+    <div style="display:block; padding:10px;">
+        <div style="font-size:12px;">Spanish Audio</div>
+        <input style="display:block;" type="file" name="audio_es[]" multiple accept="audio/*" placeholder="audio_es" required>
     </div>
     <button type="submit" style="display: inline-block; margin:10px; padding:4px 20px; background:green; color:#fff; text-transform:uppercase; border-radius:4px;">submit</button>
 </form>

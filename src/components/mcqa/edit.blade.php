@@ -100,8 +100,12 @@
                                 <input class="my-2 border border-gray-500 p-2 w-full rounded-lg" type="text" name="answer{{$answer->id}}" placeholder="Answer" value="{{$answer->answer}}">
                             </div>
                             <div class="w-1/2 px-2">
-                                <label class="w-full" for="">Media</label>
+                                <label class="w-full" for="">English Media</label>
                                 <input class="my-2 border border-gray-500 w-full rounded-lg" type="file" accept="audio/*" name="answer_{{$answer->id}}_audio" placeholder="Answer">
+                            </div>
+                            <div class="w-1/2 px-2">
+                                <label class="w-full" for="">Spanish Media</label>
+                                <input class="my-2 border border-gray-500 w-full rounded-lg" type="file" accept="audio/*" name="answer_{{$answer->id}}_audio_es" placeholder="Answer">
                             </div>
                             <div class="w-1/2 flex px-2">
                                 <div class="pt-10 bg-white pr-3">

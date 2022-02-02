@@ -23,10 +23,19 @@ class McqaController extends Controller
             $answer_1->question_id = $pmQ->id;
             $answer_1->answer = $request->answer_1;
                 $answer_1_media = new Media();
-                $request->answer_1_media->storeAs('public/answers', time().$request->answer_1_media->getClientOriginalName());
-                $answer_1_media->url = 'answers/'.time().$request->answer_1_media->getClientOriginalName();
+                $name__answer_1_media = time().uniqid().$request->answer_1_media->getClientOriginalName();
+                $request->answer_1_media->storeAs('public/answers', $name__answer_1_media);
+                $answer_1_media->url = 'answers/'.$name__answer_1_media;
                 $answer_1_media->save();
             $answer_1->media_id = $answer_1_media->id;
+            if($request->answer_1_media_es){
+                $ques_media_es = new Media();
+                $name_es = time().uniqid().$request->answer_1_media_es->getClientOriginalName();
+                $request->answer_1_media_es->storeAs('public/answers', $name_es);
+                $ques_media_es->url = 'answers/'.$name_es;
+                $ques_media_es->save();
+                $answer_1->media_id_es = $ques_media_es->id;
+            }
             if ($request->ans_correct_1) {
                 $answer_1->arrange = 1;
             }
@@ -40,10 +49,19 @@ class McqaController extends Controller
             $answer_2->question_id = $pmQ->id;
             $answer_2->answer = $request->answer_2;
                 $answer_2_media = new Media();
-                $request->answer_2_media->storeAs('public/answers', time().$request->answer_2_media->getClientOriginalName());
-                $answer_2_media->url = 'answers/'.time().$request->answer_2_media->getClientOriginalName();
+                $name__answer_2_media = time().uniqid().$request->answer_2_media->getClientOriginalName();
+                $request->answer_2_media->storeAs('public/answers', $name__answer_2_media);
+                $answer_2_media->url = 'answers/'.$name__answer_2_media;
                 $answer_2_media->save();
             $answer_2->media_id = $answer_2_media->id;
+            if($request->answer_2_media_es){
+                $ques_media_es = new Media();
+                $name_es = time().uniqid().$request->answer_2_media_es->getClientOriginalName();
+                $request->answer_2_media_es->storeAs('public/answers', $name_es);
+                $ques_media_es->url = 'answers/'.$name_es;
+                $ques_media_es->save();
+                $answer_2->media_id_es = $ques_media_es->id;
+            }
             if ($request->ans_correct_2) {
                 $answer_2->arrange = 1;
             }
@@ -57,10 +75,19 @@ class McqaController extends Controller
             $answer_3->question_id = $pmQ->id;
             $answer_3->answer = $request->answer_3;
                 $answer_3_media = new Media();
-                $request->answer_3_media->storeAs('public/answers', time().$request->answer_3_media->getClientOriginalName());
-                $answer_3_media->url = 'answers/'.time().$request->answer_3_media->getClientOriginalName();
+                $name__answer_3_media = time().uniqid().$request->answer_3_media->getClientOriginalName();
+                $request->answer_3_media->storeAs('public/answers', $name__answer_3_media);
+                $answer_3_media->url = 'answers/'.$name__answer_3_media;
                 $answer_3_media->save();
             $answer_3->media_id = $answer_3_media->id;
+            if($request->answer_3_media_es){
+                $ques_media_es = new Media();
+                $name_es = time().uniqid().$request->answer_3_media_es->getClientOriginalName();
+                $request->answer_3_media_es->storeAs('public/answers', $name_es);
+                $ques_media_es->url = 'answers/'.$name_es;
+                $ques_media_es->save();
+                $answer_3->media_id_es = $ques_media_es->id;
+            }
             if ($request->ans_correct_3) {
                 $answer_3->arrange = 1;
             }
@@ -74,10 +101,19 @@ class McqaController extends Controller
             $answer_4->question_id = $pmQ->id;
             $answer_4->answer = $request->answer_4;
                 $answer_4_media = new Media();
-                $request->answer_4_media->storeAs('public/answers', time().$request->answer_4_media->getClientOriginalName());
-                $answer_4_media->url = 'answers/'.time().$request->answer_4_media->getClientOriginalName();
+                $name__answer_4_media = time().uniqid().$request->answer_4_media->getClientOriginalName();
+                $request->answer_4_media->storeAs('public/answers', $name__answer_4_media);
+                $answer_4_media->url = 'answers/'.$name__answer_4_media;
                 $answer_4_media->save();
             $answer_4->media_id = $answer_4_media->id;
+            if($request->answer_4_media_es){
+                $ques_media_es = new Media();
+                $name_es = time().uniqid().$request->answer_4_media_es->getClientOriginalName();
+                $request->answer_4_media_es->storeAs('public/answers', $name_es);
+                $ques_media_es->url = 'answers/'.$name_es;
+                $ques_media_es->save();
+                $answer_4->media_id_es = $ques_media_es->id;
+            }
             if ($request->ans_correct_4) {
                 $answer_4->arrange = 1;
             }
@@ -86,7 +122,7 @@ class McqaController extends Controller
         }
         /* //answer4 */
         /* answer5 */
-        if($request->answer_5_media){
+        /* if($request->answer_5_media){
             $answer_5 = new McqaAns();
             $answer_5->question_id = $pmQ->id;
             $answer_5->answer = $request->answer_5;
@@ -100,10 +136,10 @@ class McqaController extends Controller
             }
             $answer_5->eng_word = $request->eng_word5;
             $answer_5->save();
-        }
+        } */
         /* //answer5 */
         /* answer6 */
-        if($request->answer_6_media){
+        /* if($request->answer_6_media){
             $answer_6 = new McqaAns();
             $answer_6->question_id = $pmQ->id;
             $answer_6->answer = $request->answer_6;
@@ -117,7 +153,7 @@ class McqaController extends Controller
             }
             $answer_6->eng_word = $request->eng_word6;
             $answer_6->save();
-        }
+        } */
         /* //answer6 */
         if($request->problem_set_id && $request->format_type_id){
             $pbq = new ProblemSetQues();
@@ -158,12 +194,23 @@ class McqaController extends Controller
         $anss = McqaAns::where('question_id', $q->id)->get();
         foreach($anss as $ans){
             $inputImage = 'answer_'.$ans->id.'_audio';
+            $inputImageES = 'answer_'.$ans->id.'_audio_es';
             if($request->$inputImage){
                 $audio = new Media();
-                $request->$inputImage->storeAs('public/questions', time().$request->$inputImage->getClientOriginalName());
-                $audio->url = 'questions/'.time().$request->$inputImage->getClientOriginalName();
+                $audio__name = time().uniqid().$request->$inputImage->getClientOriginalName();
+                $request->$inputImage->storeAs('public/questions', $audio__name);
+                $audio->url = 'questions/'.$audio__name;
                 $audio->save();
                 $ans->media_id = $audio->id;
+                $ans->save();
+            }
+            if($request->$inputImageES){
+                $audio = new Media();
+                $audio__name_es = time().uniqid().$request->$inputImageES->getClientOriginalName();
+                $request->$inputImageES->storeAs('public/questions', $audio__name_es);
+                $audio->url = 'questions/'.$audio__name_es;
+                $audio->save();
+                $ans->media_id_es = $audio->id;
                 $ans->save();
             }
         }
@@ -188,9 +235,10 @@ class McqaController extends Controller
             $uploadImage = explode(".", $valueImage->getClientOriginalName());
             if($uploadImage[0] == $question_image){
                 // dd($valueImage);
+                $name = time(). uniqid() . $valueImage->getClientOriginalName();
                 $media = new Media();
-                $valueImage->storeAs('public/question_images', time() . $valueImage->getClientOriginalName());
-                $media->url = 'question_images/' . time() . $valueImage->getClientOriginalName();
+                $valueImage->storeAs('public/question_images', $name);
+                $media->url = 'question_images/' . $name;
                 $media->save();
                 return $media->id;
             }
@@ -200,6 +248,7 @@ class McqaController extends Controller
         $file = $request->file('file');
         // $images = $request->file('images');
         $audio = $request->file('audio');
+        $audio_es = $request->file('audio_es');
 
         // dd($file);
         // File Details
@@ -245,26 +294,30 @@ class McqaController extends Controller
                         "question"      => $importData[1],
                         "answer1"       => $importData[2],
                         "image1"        => $importData[3],
-                        "arrange1"      => $importData[4],
-                        "eng_word1"     => $importData[5],
+                        "image_es1"     => $importData[4],
+                        "arrange1"      => $importData[5],
+                        "eng_word1"     => $importData[6],
 
-                        "answer2"       => $importData[6],
-                        "image2"        => $importData[7],
-                        "arrange2"      => $importData[8],
-                        "eng_word2"     => $importData[9],
+                        "answer2"       => $importData[7],
+                        "image2"        => $importData[8],
+                        "image_es2"     => $importData[9],
+                        "arrange2"      => $importData[10],
+                        "eng_word2"     => $importData[11],
 
-                        "answer3"       => $importData[10],
-                        "image3"        => $importData[11],
-                        "arrange3"      => $importData[12],
-                        "eng_word3"     => $importData[13],
+                        "answer3"       => $importData[12],
+                        "image3"        => $importData[13],
+                        "image_es3"     => $importData[14],
+                        "arrange3"      => $importData[15],
+                        "eng_word3"     => $importData[16],
 
-                        "answer4"       => $importData[14],
-                        "image4"        => $importData[15],
-                        "arrange4"      => $importData[16],
-                        "eng_word4"     => $importData[17],
+                        "answer4"       => $importData[17],
+                        "image4"        => $importData[18],
+                        "image_es4"     => $importData[19],
+                        "arrange4"      => $importData[20],
+                        "eng_word4"     => $importData[21],
 
-                        "level"         => $importData[18],
-                        "hint"          => $importData[19],
+                        "level"         => $importData[22],
+                        "hint"          => $importData[23],
 
                     );
                     // var_dump($insertData['answer1']);
@@ -302,6 +355,7 @@ class McqaController extends Controller
                             $f_arrange  = $insertData['arrange'.$x];
                             $f_eng_word  = $insertData['eng_word'.$x];
                             $f_image  = $insertData['image'.$x];
+                            $f_image_es  = $insertData['image_es'.$x];
                             
                             if ($f_answer == '-') {
                             } else {
@@ -311,6 +365,10 @@ class McqaController extends Controller
                                 if (!empty($f_image) && $f_image != '') {
                                     $media_id = $this->imagecsv($f_image, $audio);
                                     $f_Ans1->media_id = $media_id;
+                                }
+                                if (!empty($f_image_es) && $f_image_es != '') {
+                                    $media_id_es = $this->imagecsv($f_image_es, $audio_es);
+                                    $f_Ans1->media_id_es = $media_id_es;
                                 }
                                 $f_Ans1->arrange = $f_arrange;
                                 if ($f_eng_word == '-') {
