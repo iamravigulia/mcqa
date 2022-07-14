@@ -362,11 +362,11 @@ class McqaController extends Controller
                                 $f_Ans1 = new McqaAns();
                                 $f_Ans1->question_id = $fill_Q->id;
                                 $f_Ans1->answer = $f_answer;
-                                if (!empty($f_image) && $f_image != '') {
+                                if (!empty($f_image) && $f_image != '-') {
                                     $media_id = $this->imagecsv($f_image, $audio);
                                     $f_Ans1->media_id = $media_id;
                                 }
-                                if (!empty($f_image_es) && $f_image_es != '') {
+                                if (!empty($f_image_es) && $f_image_es != '-') {
                                     $media_id_es = $this->imagecsv($f_image_es, $audio_es);
                                     $f_Ans1->media_id_es = $media_id_es;
                                 }
